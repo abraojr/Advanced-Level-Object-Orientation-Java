@@ -26,10 +26,6 @@ public class Product {
 		this.price = price;
 	}
 
-	public void nonStaticPriceUpdate() {
-		price = price * 1.1;
-	}
-
 	@Override
 	public String toString() {
 		return name + ", " + String.format("%.2f", price);
