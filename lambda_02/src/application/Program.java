@@ -5,11 +5,10 @@ import java.util.List;
 import java.util.Locale;
 
 import model.entities.Product;
-import util.ProductPredicate;
 
 public class Program {
 
-	/* Make a program that, from a list of products, removes from the list only
+	/*Make a program that, from a list of products, removes from the list only
 	 * those whose minimum price is 100.*/
 
 	public static void main(String[] args) {
@@ -22,7 +21,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 
-		list.removeIf(new ProductPredicate());
+		list.removeIf(Product::staticProductPredicate);
 
 		for (Product p : list) {
 			System.out.println(p);
